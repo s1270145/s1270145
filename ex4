@@ -1,0 +1,47 @@
+#include<stdio.h>
+#include<time.h>
+#include<stdlib.h>
+
+int main()
+{
+   int c,c1,c2,c3,x;
+   char name[100];
+   char* coin[2] = {"Heads","Tails"};
+
+   srand( time( NULL ) );
+
+   c1 = rand() % 2;
+   c2 = rand() % 2;
+   c3 = rand() % 2;
+   c = c1 + c2 + c3;
+
+  printf("Who are you?\n>");
+  scanf("%s",name);
+  printf("Hello, %s\n",name);
+  printf("Tossing a coin...\n");
+
+  printf("Round 1: %s\n",coin[c1]);
+  printf("Round 2: %s\n",coin[c2]);
+  printf("Round 3: %s\n",coin[c3]);
+  printf("Heads: %d, Tails: %d\n",3-c,c);
+
+  c3 = rand() % 2;
+  c = c1 + c2 + c3;
+
+  printf("Who are you?\n> ");
+  scanf("%s",name);
+  printf("Hello, %s!\n",name);
+  printf("Tossing a coin...\n");
+
+  printf("Round 1: %s\n",coin[c1]);
+  printf("Round 2: %s\n",coin[c2]);
+  printf("Round 3: %s\n",coin[c3]);
+  printf("Heads: %d, Tails: %d\n",3-c,c);
+
+  if(c < 2)
+  printf("%s won!\n",name);
+  else
+  printf("%s lost!\n",name);
+
+  return 0;
+}
